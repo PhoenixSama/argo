@@ -41,10 +41,10 @@ export warp=${warp:-''}
 export name=${name:-''}
 export oap=${oap:-''}
 v46url="https://icanhazip.com"
-agsbxurl="https://raw.githubusercontent.com/yonggekkk/argosbx/main/argosbx.sh"
+agsbxurl="https://raw.githubusercontent.com/PhoenixSama/argo/main/argosbx.sh"
 showmode(){
 echo "Argosbx脚本一键SSH命令生器在线网址：https://yonggekkk.github.io/argosbx/"
-echo "主脚本：bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosbx/main/argosbx.sh) 或 bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/argosbx/main/argosbx.sh)"
+echo "主脚本：bash <(curl -Ls https://raw.githubusercontent.com/PhoenixSama/argo/main/argosbx.sh) 或 bash <(wget -qO- https://raw.githubusercontent.com/PhoenixSama/argo/main/argosbx.sh)"
 echo "显示节点信息命令：agsbx list 【或者】 主脚本 list"
 echo "重置变量组命令：自定义各种协议变量组 agsbx rep 【或者】 自定义各种协议变量组 主脚本 rep"
 echo "更新脚本命令：原已安装的自定义各种协议变量组 主脚本 rep"
@@ -158,7 +158,7 @@ case "$warp" in *x6*) xryx='ForceIPv6' ;; *x*) xryx='ForceIPv4v6' ;; *) xryx='Fo
 fi
 }
 upxray(){
-url="https://github.com/yonggekkk/argosbx/releases/download/argosbx/xray-$cpu"; out="$HOME/agsbx/xray"; (command -v curl >/dev/null 2>&1 && curl -Lo "$out" -# --retry 2 "$url") || (command -v wget>/dev/null 2>&1 && timeout 3 wget -O "$out" --tries=2 "$url")
+url="https://github.com/PhoenixSama/argo/releases/download/test/xray-$cpu"; out="$HOME/agsbx/xray"; (command -v curl >/dev/null 2>&1 && curl -Lo "$out" -# --retry 2 "$url") || (command -v wget>/dev/null 2>&1 && timeout 3 wget -O "$out" --tries=2 "$url")
 chmod +x "$HOME/agsbx/xray"
 sbcore=$("$HOME/agsbx/xray" version 2>/dev/null | awk '/^Xray/{print $2}')
 echo "已安装Xray正式版内核：$sbcore"
